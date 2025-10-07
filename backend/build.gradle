@@ -26,7 +26,7 @@ ext {
     set('springCloudVersion', "2023.0.1")
     set('oktaVersion', "13.0.2")
     set('hibernate.version', '6.6.2.Final')
-    set('jacksonBomVersion', '2.17.2')
+    set('jackson-bom.version', '2.17.2')
 }
 repositories {
     mavenCentral()
@@ -160,7 +160,6 @@ dependencies {
     testImplementation "com.github.tomakehurst:wiremock-jre8-standalone:2.35.0"
 
     implementation 'ca.uhn.hapi.fhir:hapi-fhir-structures-r4:7.6.0'
-    implementation 'com.fasterxml.jackson.core:jackson-core:2.17.3'
 
     // HL7v2
     implementation 'ca.uhn.hapi:hapi-base:2.5.1'
@@ -180,7 +179,6 @@ dependencies {
 
 dependencyManagement {
     imports {
-        mavenBom "com.fasterxml.jackson:jackson-bom:${jacksonBomVersion}"
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
 }
