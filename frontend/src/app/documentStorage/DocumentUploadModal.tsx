@@ -253,7 +253,8 @@ export const DocumentUploadModal: React.FC<DocumentUploadModalProps> = ({
           <label htmlFor="tags">Tags</label>
           <div style={{ display: "flex", gap: "8px" }}>
             <TextInput
-              id="tags"
+              name="tags"
+              idString="tags"
               value={tagInput}
               onChange={(e) => setTagInput(e.target.value)}
               onKeyDown={(e) => {

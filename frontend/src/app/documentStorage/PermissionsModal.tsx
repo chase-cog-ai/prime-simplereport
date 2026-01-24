@@ -188,7 +188,8 @@ export const PermissionsModal: React.FC<PermissionsModalProps> = ({
             <div className="form-group">
               <label htmlFor="new-user-email">Email Address</label>
               <TextInput
-                id="new-user-email"
+                name="new-user-email"
+                idString="new-user-email"
                 type="email"
                 value={newEmail}
                 onChange={(e) => {
@@ -196,7 +197,7 @@ export const PermissionsModal: React.FC<PermissionsModalProps> = ({
                   setEmailError("");
                 }}
                 placeholder="user@example.com"
-                aria-describedby={emailError ? "email-error" : undefined}
+                ariaDescribedBy={emailError ? "email-error" : undefined}
               />
               {emailError && (
                 <span

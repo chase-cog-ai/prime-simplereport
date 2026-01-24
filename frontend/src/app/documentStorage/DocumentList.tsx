@@ -159,7 +159,8 @@ export const DocumentList: React.FC<DocumentListProps> = ({
                 }}
               />
               <TextInput
-                id="search-documents"
+                name="search-documents"
+                idString="search-documents"
                 value={filter.searchTerm || ""}
                 onChange={(e) =>
                   setFilter((prev) => ({ ...prev, searchTerm: e.target.value }))
